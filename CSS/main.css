@@ -139,6 +139,8 @@ header{
     width: 1200px;
     margin: auto;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 article{
@@ -195,3 +197,39 @@ article img{
 
 
 
+/* aside other articles */
+
+.container-aside aside{
+    width: 320px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px -20px black;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.container-aside aside img {
+    width: 100%;
+}
+
+.container-aside aside h3,
+.container-aside aside p {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-aside aside button:hover {
+    opacity: .7;
+}
