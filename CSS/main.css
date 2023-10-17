@@ -75,6 +75,29 @@ header {
   color: red;
 }
 
+.menu nav ul li a i {
+  display: none;
+}
+
+#icon-menu{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  font-size: 20px;
+  background: #333;
+  border-radius: 100%;
+  color: #bbbbbb;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#icon-menu:hover{
+  background: #545454;
+}
 /* PORTADA */
 
 .container-cover {
@@ -261,18 +284,22 @@ article img {
 
 footer .redes-footer .fa-facebook:hover{
     color: #41579A;
+    background: white;
     transition: color 500ms;
   }
-  
+
+  footer .redes-footer .fa-github:hover{
+    color: #000000;
+    background: white;
+    transition: color 500ms;
+  }
+    
 footer .redes-footer .fa-linkedin:hover{
   color: #41579A;
+  background: white;
   transition: color 500ms;
 }
 
-footer .redes-footer .fa-github:hover{
-  color: #000000;
-  transition: color 500ms;
-}
 
 .container-footer footer hr{
   margin-top: 20px;
@@ -287,3 +314,96 @@ footer .redes-footer .fa-github:hover{
   color: #8e8e8e;
   font-weight: 500 ;
 }
+
+/* Responsive design */
+
+@media screen and (max-width:1220px){
+  .header-content, .container-content, .container-footer{
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width:1020px){
+  .container-content{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  article{
+    box-shadow: 0 0 0 0;
+  }
+
+  .container-aside{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-aside aside{
+    max-width: 300px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 800px){
+
+
+  .conatiner-all{
+  }
+
+  .move-container-all{
+    transform: translateX(300px);
+    
+    transition: all 300ms;
+  }
+
+  #icon-menu{
+    display: flex;
+  }
+
+  .menu{
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background: #333;
+    overflow: hidden;
+    box-shadow: 10px 0 20px -25px black;
+  }
+
+  .menu nav ul{
+    flex-direction: column;
+  }
+
+  .menu nav ul li{
+    max-width: 200px;
+    height: 50px;
+    justify-content: flex-start;
+  }
+
+  .menu-selected:before{
+    width: 0;
+  }
+
+  .menu nav ul li a{
+    margin-top: 40px;
+  }
+
+  .menu nav ul li a i{
+    width: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    color: red;
+  }
+
+  #icon-menu {
+    display: flex;
+  }
+
+  .container-aside{
+    flex-wrap: wrap;
+  }
+
+}
+
