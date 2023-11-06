@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/69776f5153.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% block title %}{% endblock %}</title>
+    <meta
+      name="viewport"
+      content="width: device-width, user-scalable=no, initial-scale=1.0, maximun-scale, minimun-scale=1.0"
+    />
+  </head>
+  <body>
+    <!-- Header - MENU -->
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <h1>Riccino<b>Blg</b></h1>
+        </div>
+        <div class="menu" id="show-menu">
+          <nav>
+            <ul>
+              <li class="menu-selected">
+                <a href="/" class="text-menu-selected"
+                  ><i class="fa-solid fa-house"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-message"></i>Contact</a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-user"></i>About Us</a>
+              </li>
+              <li><a href="#">Riccino</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="icon-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <div class="container-all" id="move-content">
+      <!-- PORTADA -->
+      <div class="container-cover">
+        <div class="container-info-cover">
+          <h1>The most recent <strong>Tech News</strong></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            numquam optio iste sapiente accusamus? Quos, tenetur velit aliquid
+            reprehenderit quibusdam perferendis, enim minus totam perspiciatis
+            quaerat numquam iusto repudiandae ab.
+          </p>
+        </div>
+      </div>
+
+      <!-- CONTAINER -->
+      <div class="container-content">
+        {% block article %}{% endblock %}
+
+        <div class="container-aside">
+          
+          {% for article in articles %}
+          <aside>
+            <div class="container-image-articles">
+              <img src="{% static 'IMG/'|add:article.image %}" alt="Article Image">
+
+            </div>
+            <h3>{{ article.title }}</h3>
+            <p>
+              {{article.content}}... 
+            </p>
+            <a href='/art/{{article.id_article}}' ><button>Leer mas...</button></a>
+          </aside>
+          {% endfor %}
+            
+          <!--aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
+            <h3>Titulo del articulo</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              expedita in similique veritatis illo odio vitae cum sapiente
+              commodi incidunt saepe, quaerat est ipsa nam recusandae delectus
+              soluta natus minima?
+            </p>
+            <a href="#"><button>Leer mas...</button></a>
+          </aside>
+          <aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
+            <h3>Titulo del articulo</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              expedita in similique veritatis illo odio vitae cum sapiente
+              commodi incidunt saepe, quaerat est ipsa nam recusandae delectus
+              soluta natus minima?
+            </p>
+            <a href="#"><button>Leer mas...</button></a>
+          </aside>
+          <aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
+            <h3>Titulo del articulo</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              expedita in similique veritatis illo odio vitae cum sapiente
+              commodi incidunt saepe, quaerat est ipsa nam recusandae delectus
+              soluta natus minima?
+            </p>
+            <a href="#"><button>Leer mas...</button></a>
+          </aside-->
+        </div>
+      </div>
+      <div class="container-footer">
+        <footer>
+          <div class="logo-footer">
+            <img src="" alt="" />
+          </div>
+          <div class="redes-footer">
+            <a href="#"
+              ><i class="fa-brands fa-github icon-redes-footer"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-facebook icon-redes-footer"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-linkedin icon-redes-footer"></i
+            ></a>
+          </div>
+          <hr />
+          <h4>&copy; Todos los derechos reservados</h4>
+        </footer>
+      </div>
+    </div>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script>
+      //location.href = location.href + "#strt-art" ;
+    </script>
+  </body>
+</html>
