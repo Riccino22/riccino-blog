@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +7,7 @@
       src="https://kit.fontawesome.com/69776f5153.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -68,6 +70,19 @@
 
         <div class="container-aside">
           
+          {% for article in articles %}
+          <aside>
+            <div class="container-image-articles">
+              <img src="{% static 'IMG/'|add:article.image %}" alt="Article Image">
+
+            </div>
+            <h3>{{ article.title }}</h3>
+            <p>
+              {{article.content}}... 
+            </p>
+            <a href='/{{article.id_article}}' ><button>Leer mas...</button></a>
+          </aside>
+          {% endfor %}
         </div>
       </div>
       <div class="container-footer">
@@ -91,6 +106,7 @@
         </footer>
       </div>
     </div>
+    <script src="{% static 'js/app.js' %}"></script>
     <script>
       //location.href = location.href + "#strt-art" ;
     </script>
@@ -98,4 +114,42 @@
 </html>
 
             
- 
+          <!--aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
+            <h3>Titulo del articulo</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              expedita in similique veritatis illo odio vitae cum sapiente
+              commodi incidunt saepe, quaerat est ipsa nam recusandae delectus
+              soluta natus minima?
+            </p>
+            <a href="#"><button>Leer mas...</button></a>
+          </aside>
+          <aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
+            <h3>Titulo del articulo</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              expedita in similique veritatis illo odio vitae cum sapiente
+              commodi incidunt saepe, quaerat est ipsa nam recusandae delectus
+              soluta natus minima?
+            </p>
+            <a href="#"><button>Leer mas...</button></a>
+          </aside>
+          <aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
+            <h3>Titulo del articulo</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              expedita in similique veritatis illo odio vitae cum sapiente
+              commodi incidunt saepe, quaerat est ipsa nam recusandae delectus
+              soluta natus minima?
+            </p>
+            <a href="#"><button>Leer mas...</button></a>
+          </aside-->
