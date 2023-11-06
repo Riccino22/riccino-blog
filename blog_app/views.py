@@ -4,7 +4,7 @@ from . import articles
 
 def home(request):
     return render(request, 'index.html', {
-        'data': "HOLA QUE TAL"
+        'data': articles.recent_articles
     })
 
 def art(request, id):
