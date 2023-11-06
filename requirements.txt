@@ -16,7 +16,6 @@ colorama==0.4.6
 distlib==0.3.7
 Django==4.2.6
 # Editable install with no version control (django-cors-headers==4.3.0)
--e c:\users\usuario\documents\trabajo\portafolio de programador\modulos\django-cors-headers-main
 environ==1.0
 exceptiongroup==1.1.1
 filelock==3.12.4
