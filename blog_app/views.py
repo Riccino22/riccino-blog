@@ -3,7 +3,9 @@ from django.shortcuts import render
 from . import articles
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {
+        'data': "HOLA QUE TAL"
+    })
 
 def art(request, id):
     # Get the recent articles list
