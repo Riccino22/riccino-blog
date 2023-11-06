@@ -66,12 +66,28 @@
 
       <!-- CONTAINER -->
       <div class="container-content">
-
         {% block article %}{% endblock %}
 
         <div class="container-aside">
+          
+          {% for article in articles %}
           <aside>
-            <img src="./IMG/glasses-1052010_1280.jpg" alt="" />
+            <div class="container-image-articles">
+              <img src="{% static 'IMG/'|add:article.image %}" alt="Article Image">
+
+            </div>
+            <h3>{{ article.title }}</h3>
+            <p>
+              {{article.content}}... 
+            </p>
+            <a href='/art/{{article.id_article}}' ><button>Leer mas...</button></a>
+          </aside>
+          {% endfor %}
+            
+          <!--aside>
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
             <h3>Titulo del articulo</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -82,7 +98,9 @@
             <a href="#"><button>Leer mas...</button></a>
           </aside>
           <aside>
-            <img src="./IMG/glasses-1052010_1280.jpg" alt="" />
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
             <h3>Titulo del articulo</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -93,7 +111,9 @@
             <a href="#"><button>Leer mas...</button></a>
           </aside>
           <aside>
-            <img src="./IMG/glasses-1052010_1280.jpg" alt="" />
+            <div class="container-image-articles">
+              <img src="{% static './IMG/oig.jpg' %}" alt="" />
+            </div>
             <h3>Titulo del articulo</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -102,7 +122,7 @@
               soluta natus minima?
             </p>
             <a href="#"><button>Leer mas...</button></a>
-          </aside>
+          </aside-->
         </div>
       </div>
       <div class="container-footer">
