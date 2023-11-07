@@ -9,14 +9,14 @@
             }
         }
     ],
-    "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
+    "routes": 
         {
             "src": "/(.*)",
             "dest": "blog_site/wsgi.py"
+        },
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
         }
     ]
 }
