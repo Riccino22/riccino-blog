@@ -7,14 +7,8 @@
             "runtime": "python3.12"
         }
     },
-    "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "blog_site/wsgi.py"
-        }
-    ]
+    "routes": {
+        "src": "/(.*)",
+        "dest": "blog_site/wsgi.py"
+    }
 }
