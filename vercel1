@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "blog_site/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "blog_site/wsgi.py"
+      }
+    ],
+    "env": {
+      "PYTHON_VERSION": "3.12.0"
+    }
+  }
+  
