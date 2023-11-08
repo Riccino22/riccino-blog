@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "manage.py",
+        "src": "blog_site/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/manage.py"
+        "dest": "blog_site/wsgi.py"
       }
     ],
     "env": {
