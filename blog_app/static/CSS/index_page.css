@@ -6,11 +6,9 @@
   font-family: sans-serif;
 }
 
-
-  body{
-    background: #333;
-  }
-
+body {
+  background: #333;
+}
 
 /*MENU*/
 
@@ -85,7 +83,7 @@ header {
   display: none;
 }
 
-#icon-menu{
+#icon-menu {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -101,18 +99,18 @@ header {
   cursor: pointer;
 }
 
-#icon-menu:hover{
+#icon-menu:hover {
   background: #545454;
 }
 /* PORTADA */
 
-.container-all{
+.container-all {
   background: #fff;
 }
 
 .container-cover {
   width: 100%;
-  height: 400px;
+  height: 500px;
   position: relative;
   margin-top: 80px;
   background-image: url(../IMG/8c71c47c2a0cc1e97112b758ba30aa68.jpg);
@@ -132,7 +130,7 @@ header {
 
 .container-info-cover {
   max-width: 800px;
-  height: 400px;
+  height: 500px;
   margin: auto;
   text-align: center;
   align-items: center;
@@ -228,7 +226,6 @@ article img {
 .container-aside aside img {
   width: 100%;
   height: 300px;
-  
 }
 
 .container-aside aside h3,
@@ -294,84 +291,83 @@ article img {
   border-radius: 100%;
 }
 
-footer .redes-footer .fa-facebook:hover{
-    color: #41579A;
-    background: white;
-    transition: color 500ms;
-  }
-
-  footer .redes-footer .fa-github:hover{
-    color: #000000;
-    background: white;
-    transition: color 500ms;
-  }
-    
-footer .redes-footer .fa-linkedin:hover{
-  color: #41579A;
+footer .redes-footer .fa-facebook:hover {
+  color: #41579a;
   background: white;
   transition: color 500ms;
 }
 
+footer .redes-footer .fa-github:hover {
+  color: #000000;
+  background: white;
+  transition: color 500ms;
+}
 
-.container-footer footer hr{
+footer .redes-footer .fa-linkedin:hover {
+  color: #41579a;
+  background: white;
+  transition: color 500ms;
+}
+
+.container-footer footer hr {
   margin-top: 20px;
   border: none;
   height: 2px;
   background: #cacaca7a;
 }
 
-.container-footer h4{
+.container-footer h4 {
   text-align: center;
   margin-top: 40px;
   color: #8e8e8e;
-  font-weight: 500 ;
+  font-weight: 500;
 }
 
 /* Responsive design */
 
-@media screen and (max-width:1220px){
-  .header-content, .container-content, .container-footer{
+@media screen and (max-width: 1220px) {
+  .header-content,
+  .container-content,
+  .container-footer {
     max-width: 1000px;
     padding: 0 20px;
   }
 }
 
-@media screen and (max-width:1020px){
-  .container-content{
+@media screen and (max-width: 1020px) {
+  .container-content {
     width: 100%;
     flex-direction: column;
   }
 
-  article{
+  article {
     box-shadow: 0 0 0 0;
   }
 
-  .container-aside{
+  .container-aside {
     display: flex;
     justify-content: center;
   }
 
-  .container-aside aside{
+  .container-aside aside {
     max-width: 300px;
     margin: 10px;
   }
 }
 
-@media screen and (max-width: 800px){
-
-
-  .container-all{
-    transition: all 300ms cubic-bezier(1,0,0,1);
-}
-  .move-container-all{
+@media screen and (max-width: 800px) {
+  .container-all {
+    transition: all 300ms cubic-bezier(1, 0, 0, 1);
+  }
+  .move-container-all {
     transform: translateX(300px);
   }
 
-  #icon-menu{
+  #icon-menu {
     display: flex;
   }
 
-  .menu{
+  .menu {
     width: 0px;
     height: 100vh;
     position: fixed;
@@ -381,33 +377,33 @@ footer .redes-footer .fa-linkedin:hover{
     overflow: hidden;
     box-shadow: 10px 0 20px -25px black;
     transform: translateX(-350px);
-    transition: all 300ms cubic-bezier(1,0,0,1);
+    transition: all 300ms cubic-bezier(1, 0, 0, 1);
   }
 
-  .show-lateral{
+  .show-lateral {
     width: 300px;
     transform: translateX(0);
   }
 
-  .menu nav ul{
+  .menu nav ul {
     flex-direction: column;
   }
 
-  .menu nav ul li{
+  .menu nav ul li {
     max-width: 200px;
     height: 50px;
     justify-content: flex-start;
   }
 
-  .menu-selected:before{
+  .menu-selected:before {
     width: 0;
   }
 
-  .menu nav ul li a{
+  .menu nav ul li a {
     margin-top: 40px;
   }
 
-  .menu nav ul li a i{
+  .menu nav ul li a i {
     width: 20px;
     display: inline-block;
     margin-right: 10px;
@@ -418,9 +414,7 @@ footer .redes-footer .fa-linkedin:hover{
     display: flex;
   }
 
-  .container-aside{
+  .container-aside {
     flex-wrap: wrap;
   }
-
 }
-
