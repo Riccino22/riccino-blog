@@ -1,28 +1,19 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "blog_site/wsgi.py",
-      "use": "@vercel/python"
-    },
-    {
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
+    "version": 2,
+    "builds": [
+      {
+        "src": "blog_site/wsgi.py",
+        "use": "@vercel/python"
       }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "blog_site/wsgi.py"
+      }
+    ],
+    "env": {
+      "PYTHON_VERSION": "3.12.0"
     }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "blog_site/wsgi.py"
-    }
-  ],
-  "env": {
-    "PYTHON_VERSION": "3.12.0"
   }
-}
+  
