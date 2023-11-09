@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/69776f5153.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}" />
     <link rel="stylesheet" href="{% static 'CSS/index_page.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,34 +55,47 @@
       <!-- PORTADA -->
       <div class="container-cover">
         <div class="container-info-cover">
-          <h1> Information about <strong>the Techworld </strong></h1>
+          <h1>Information about <strong>the Techworld </strong></h1>
           <p>
-            Uncover captivating insights and practical tips in our blog, exploring intriguing and useful topics in the world of technology.
+            Uncover captivating insights and practical tips in our blog,
+            exploring intriguing and useful topics in the world of technology.
           </p>
         </div>
       </div>
 
       <!-- CONTAINER -->
+      <input
+        type="number"
+        id="zoomInput"
+        min="50"
+        max="200"
+        value="100"
+        step="1"
+      />
       <div class="container-content">
-       
-
-        <div class="container-aside">
-          
-          {% for article in data %}
-          <aside>
-            <div class="container-image-articles">
-              <img src="{% static 'IMG/'|add:article.image %}" alt="Article Image">
-
-            </div>
-            <h3>{{ article.title }}</h3>
-            <p>
-              {{article.content}}... 
-            </p>
-            <a href='/{{article.id_article}}' ><button>Leer mas...</button></a>
-          </aside>
-          {% endfor %}
+        <div class="container-articles">
+          <div class="container-aside">
+            {% for article in data %}
+            <aside>
+              <div class="container-image-articles">
+                <img
+                  src="{% static 'IMG/'|add:article.image %}"
+                  alt="Article Image"
+                />
+              </div>
+              <h3>{{ article.title }}</h3>
+              <p>{{article.content}}...</p>
+              <a href="/{{article.id_article}}"><button>Leer mas...</button></a>
+            </aside>
+            {% endfor %}
+          </div>
         </div>
       </div>
+      <p id="anchoPagina"></p>
+      
+      <button id="scroll-right-button" class="btn-side">&#11164;</button>
+      <button id="scroll-left-button" class="btn-side">&#11166;</button>
+
       <div class="container-footer">
         <footer>
           <div class="logo-footer">
@@ -105,6 +119,74 @@
     </div>
     <script src="{% static 'js/app.js' %}"></script>
     <script>
+      const scrollLeftButton = document.getElementById("scroll-left-button");
+      const scrollRightButton = document.getElementById("scroll-right-button");
+      const containerAside = document.querySelector(".container-aside");
+      let scrollValue = 0;
+      aside = containerAside.children[containerAside.children.length - 1]
+
+      //containerAside.children[containerAside.children.length - 1]
+      scrollLeftButton.addEventListener("click", () => {
+        if (document.documentElement.offsetWidth - aside.getBoundingClientRect().left - 320 <= 20) {
+          scrollValue -= 320;
+          containerAside.style.transform = `translateX(${scrollValue}px)`; // Ancho de cada elemento aside + margen izquierdo
+        }
+      });
+
+      /*
+      scrollLeftButton.addEventListener("click", () => {
+        if (scrollValue <= -containerAside.children.length * 320) {
+          containerAside.style.transform = `translateX(${
+            -(containerAside.children.length - 1) * 320
+          }px)`;
+        } else {
+          scrollValue -= 320;
+          containerAside.style.transform = `translateX(${scrollValue}px)`; // Ancho de cada elemento aside + margen izquierdo
+        }
+      });
+*/
+
+
+
+
+
+
+
+
+
+      scrollRightButton.addEventListener("click", () => {
+        scrollValue = 0;
+        containerAside.style.transform = `translateX(${scrollValue})`;
+      });
+
+      // Función para mostrar el ancho de la página en un párrafo
+      function mostrarAnchoPagina() {
+        var anchoPagina =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        var parrafo = document.getElementById("anchoPagina");
+        parrafo.textContent = "Ancho de la página: " + anchoPagina + "px";
+      }
+
+      // Evento que se dispara cuando se redimensiona la ventana
+      window.addEventListener("resize", mostrarAnchoPagina);
+
+      // Llamada inicial para mostrar el ancho de la página al cargarla
+      mostrarAnchoPagina();
+
+      // Obtener referencia al elemento de entrada
+      var zoomInput = document.getElementById("zoomInput");
+
+      // Función para cambiar el zoom de la página
+      function cambiarZoom() {
+        var zoomValue = zoomInput.value;
+        setTimeout();
+      }
+
+      // Evento que se dispara cuando se interactúa con el input
+      zoomInput.addEventListener("input", cambiarZoom);
+
       //location.href = location.href + "#strt-art" ;
     </script>
   </body>
