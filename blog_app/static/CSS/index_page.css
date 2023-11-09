@@ -21,7 +21,6 @@
   .container-aside {
     
     display: inline-flex;
-    justify-content: center;
     transition: transform 0.3s; /* Agregado */
   }
   
@@ -110,4 +109,19 @@
       }
   }
 
-  @media screen and ()
+
+  @media screen and (max-width: 1280px){
+
+    .container-aside{    
+      margin-left: 6%;
+    }
+
+  }  
+  
+  @media screen and (min-width: 1600px){
+    .container-aside{    
+      justify-content: center;
+    }
+
+  } 
+  
