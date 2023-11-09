@@ -15,6 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
     <title>Riccino Blog - Information about techworld</title>
     <meta
       name="viewport"
@@ -72,6 +78,10 @@
         value="100"
         step="1"
       /-->
+      <div class="container-title">
+        
+      <h1 class="title">All Articles</h1>
+      </div>
       <div class="container-content">
         <div class="container-articles">
           <div class="container-aside">
@@ -90,20 +100,21 @@
             {% endfor %}
             <aside>
               <div class="container-image-articles">
-                <img
-                  src=""
-                  alt="Article Image"
-                />
+                <img src="" alt="Article Image" />
               </div>
               <h3>AA</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni accusantium blanditiis consequuntur explicabo velit error veniam nihil culpa provident?</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+                accusantium blanditiis consequuntur explicabo velit error veniam
+                nihil culpa provident?
+              </p>
               <a href=""><button>Leer mas...</button></a>
             </aside>
           </div>
         </div>
       </div>
       <!--p id="anchoPagina"></p-->
-      
+
       <button id="scroll-right-button" class="btn-side">&#11164;</button>
       <button id="scroll-left-button" class="btn-side">&#11166;</button>
 
@@ -134,11 +145,16 @@
       const scrollRightButton = document.getElementById("scroll-right-button");
       const containerAside = document.querySelector(".container-aside");
       let scrollValue = 0;
-      aside = containerAside.children[containerAside.children.length - 1]
+      aside = containerAside.children[containerAside.children.length - 1];
 
       //containerAside.children[containerAside.children.length - 1]
       scrollLeftButton.addEventListener("click", () => {
-        if (document.documentElement.offsetWidth - aside.getBoundingClientRect().left - 320 <= 20) {
+        if (
+          document.documentElement.offsetWidth -
+            aside.getBoundingClientRect().left -
+            320 <=
+          20
+        ) {
           scrollValue -= 320;
           containerAside.style.transform = `translateX(${scrollValue}px)`; // Ancho de cada elemento aside + margen izquierdo
         }
@@ -156,14 +172,6 @@
         }
       });
 */
-
-
-
-
-
-
-
-
 
       scrollRightButton.addEventListener("click", () => {
         scrollValue = 0;
