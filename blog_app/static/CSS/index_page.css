@@ -102,15 +102,7 @@
 
 
 
-  @media screen and (min-width:112px){
-    .container-aside aside:first-child {
-        margin-left: 15%;
-        min-width: 320px; /* Asegura que el primer aside siempre tenga un ancho mínimo de 320px */
-      }
-  }
-
-
-  @media screen and (max-width: 1280px){
+  @media screen and (min-width:1220px) and (max-width: 1280px){
 
     .container-aside{    
       margin-left: 6%;
