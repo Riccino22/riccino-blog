@@ -74,14 +74,14 @@
     color: red;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 60px;
-    height: 590.22px;
+    height: 600px;
     font-size: 60px;
     z-index: 1;
     background: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 660px;
+    top: 655px;
   }
 
   .btn-side:hover{
@@ -102,10 +102,18 @@
 
 
 
-  @media screen and (min-width:1220px) and (max-width: 1280px){
+
+
+  @media screen and (min-width:1000px){
+    .container-aside aside:first-child {
+        margin-left: 15%;
+        min-width: 320px; /* Asegura que el primer aside siempre tenga un ancho mínimo de 320px */
+      }
+  }
+  @media screen and (max-width: 1280px){
 
     .container-aside{    
-      margin-left: 6%;
+      margin-left: 10%;
     }
 
   }  
