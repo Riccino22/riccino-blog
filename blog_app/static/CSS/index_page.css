@@ -42,6 +42,7 @@ body{
 
 .container-aside {
   display: inline-flex;
+  margin-left: 25%;
   transition: transform 0.3s; /* Agregado */
 }
 
@@ -140,7 +141,7 @@ body{
 
 @media screen and (min-width: 1000px) {
   .container-aside aside:first-child {
-    margin-left: 15%;
+    
     min-width: 320px; /* Asegura que el primer aside siempre tenga un ancho mínimo de 320px */
   }
   /*#scroll-left-button {
@@ -148,8 +149,12 @@ body{
   }*/
 }
 
+@media screen and (max-width:1020px){
+  .container-content{
+  }
+
 @media screen and (max-width: 1280px) {
-  .container-aside {
+  .container-aside{
     margin-left: 10%;
   }
   #scroll-left-button {
@@ -159,6 +164,15 @@ body{
     width: 70px;
   }
 }
+
+  #scroll-left-button {
+    /*Colocar el boton pegado a la parte izquierda de la pagina*/
+
+    left: 95%;
+    width: 70px;
+  }
+}
+
 
 @media screen and (min-width: 1600px) {
   .container-aside {
