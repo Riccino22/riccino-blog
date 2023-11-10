@@ -19,12 +19,8 @@ def art(request, id):
             # Add the article to the articles to show list
             articles_to_show.append(article)  
             # Print the title of the article 
-    # Check if the number of articles to show is greater than or equal to 4
-    if len(articles_to_show) == 4:  
-        # Remove the last article from the articles to show list
-        articles_to_show.pop()  
-    
-    print(len(articles_to_show)) 
+    # Check if the number of articles to show is greater than or equal to 4    
+    print(len(articles_to_show[:3])) 
     # Render the template for the given id
     return render(request, 'articles/' + str(id) + '.html', {
         "articles": articles_to_show,

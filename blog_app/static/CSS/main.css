@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -115,7 +118,7 @@ header {
   height: 400px;
   position: relative;
   margin-top: 80px;
-  background-image: url(../IMG/8c71c47c2a0cc1e97112b758ba30aa68.jpg);
+  background-image: url(../IMG/home.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -215,6 +218,17 @@ article img {
 }
 
 /* aside other articles */
+.container-aside a {
+  color: black;
+}
+
+.container-aside a:hover{
+  color: rgb(185, 0, 0);
+}
+
+.container-aside article {
+  display: flex;
+}
 
 .container-aside aside {
   width: 320px;
@@ -257,7 +271,7 @@ article img {
 
 .container-footer {
   width: 100%;
-  padding: 400px 0;
+  padding: 40px 0;
   background: #f7f7f7;
   margin-top: 40px;
 }
