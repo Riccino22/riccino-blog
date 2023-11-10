@@ -311,19 +311,22 @@ article img {
   color: #a2a2a2;
 }
 
-footer .redes-footer .fa-facebook-f:hover{
-  background: #41579A;
-  color: #fff;
+footer .redes-footer .fa-facebook:hover{
+  color: #41579A;
+  background: white;
+  transition: color 500ms;
 }
 
-footer .redes-footer .fa-google-plus-g:hover{
-  background: #DE4C34;
-  color: #fff;
+footer .redes-footer .fa-github:hover{
+  color: #000000;
+  background: white;
+  transition: color 500ms;
 }
-
-footer .redes-footer .fa-instagram:hover{
-  background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
-  color: #fff;
+  
+footer .redes-footer .fa-linkedin:hover{
+color: #41579A;
+background: white;
+transition: color 500ms;
 }
 
 
